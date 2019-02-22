@@ -1,0 +1,4 @@
+server_base_url: 'http://localhost:5000'
+oauth_token: '02040083988c6011703f4bc98289a470bfd2e4388bc5df0d59b2e98d083b2dba' 
+oauth_secret: '0be31ef885991027af7e6507b5af2d649edeadd44a2744836dddf789d44a8d3b'
+oauth_redirect_uri: 'http://localhost:3001/oauth/callback'

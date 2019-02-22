@@ -1,0 +1,32 @@
+default: &default
+  adapter: sqlserver
+  mode: dblib
+  host: template-server.veracross.net
+  port: 1433
+  username: 'vc.system'
+  password: 'vc_sql02%'
+  metabase_host: mb0.veracross.net
+  metabase_database: vcx_metabase
+  appname: Gatekeeper
+  timeout: 10000
+  login_timeout: 5
+  pool: 10
+
+development:
+  <<: *default
+  database: vcsandbox_database
+  host: localhost
+  metabase_host: localhost
+  username: axiom.system
+  password: Testing123@@
+
+# # Warning: The database defined as "test" will be erased and
+# # re-generated from your development database when you run "rake".
+# # Do not set this db to the same as development or production.
+# test:
+#   <<: *default
+#   database: db/test.sqlite3
+
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
