@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    @person_info = JSON.parse RestClient.post("#{ENV['server_base_url']}/vcsandbox/oauth/userinfo", access_token: session[:access_token])
+    @person_info = JSON.parse RestClient.post("#{ENV['server_base_url']}/vcsandbox/oauth/userinfo", {}, {Authorization: "Bearer #{session[:access_token]}"})
   end
 end
